@@ -144,6 +144,10 @@ function update() {
     {
         player.body.velocity.y = -350;
     }
+     if ( this.score < 120 ){
+              this.game.state.restart();
+              this.game.state.start('game_over');
+        }
 
 }
 
