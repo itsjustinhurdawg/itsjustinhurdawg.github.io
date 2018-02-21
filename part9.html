@@ -36,7 +36,7 @@ var scoreText;
 var button;
 
 function create() {
-    button = game.addbutton(game.world.centerX - 10, 300, 'Restart', actionOnClick, this, 0, 1, 2);
+    button = game.add.button(game.world.centerX - 10, 300, 'Restart', actionOnClick, this, 0, 1, 2);
 
     //  We're going to be using physics, so enable the Arcade Physics system
     game.physics.startSystem(Phaser.Physics.ARCADE);
