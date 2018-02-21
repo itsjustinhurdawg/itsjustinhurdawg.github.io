@@ -21,7 +21,8 @@ function preload() {
     game.load.image('sky', 'assets/wallpaper.jpg'); //assets/
     game.load.image('ground', 'assets/platform.png');
     game.load.image('star', 'assets/star.png');
-    game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
+    game.load.spritesheet('dude', 'assets/dude.png', 32, 48);\
+    game.load.image('Restart', 'assets/RedButton.png');
 
 }
 
@@ -32,8 +33,10 @@ var cursors;
 var stars;
 var score = 0;
 var scoreText;
+var button;
 
 function create() {
+    button = game.addbutton(game.world.centerX - 10, 300, 'Restart', actionOnClick, this, 0, 1, 2);
 
     //  We're going to be using physics, so enable the Arcade Physics system
     game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -146,7 +149,10 @@ function update() {
     }
 
 }
-
+function actionOnClick() {
+	location.reload();
+}
+	
 function collectStar (player, star) {
     
     // Removes the star from the screen
