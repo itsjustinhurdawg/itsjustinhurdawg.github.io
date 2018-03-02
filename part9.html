@@ -104,6 +104,16 @@ function create() {
     cursors = game.input.keyboard.createCursorKeys();
     
 }
+-----------------update: function() {
+
+	game.physics.arcade.overlap(player,stars,die);
+	game.physicsarcade.overlap(starts,dude,bulletAlienCollision);
+function bulletAlienCollision(a,b) {
+	a.kill();
+	b.kill();
+function die(){
+	game.state.restart('state1') //make a start page for this game and then change the name.
+}
 
 function update() {
 
